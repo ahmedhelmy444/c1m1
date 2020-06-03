@@ -67,7 +67,7 @@ unsigned char  find_mean (unsigned char * arr , unsigned int size ){
 	for(i=0;i<size;i++){
 		mean+=arr[i];	
 		mean/=size; }
-	return  unsigned char(mean) ; 	
+	return  (unsigned char)mean ; 	
 
 
 }
