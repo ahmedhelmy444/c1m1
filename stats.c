@@ -39,7 +39,7 @@ void main() {
 		                     114, 88,   45,  76, 123,  87,  23,
  				     200, 122, 150, 90,   92,  87, 177, 244,
                                      201,   6,  12,  60,   8,   2,   5,  67,
-			             7,  87, 250, 230,  99,   3, 100,  90}
+			             7,  87, 250, 230,  99,   3, 100,  90};
 /* Other Variable Declarations Go Here */
 unsigned int size = SIZE ;
 /* Statistics and Printing Functions Go Here */
@@ -52,13 +52,13 @@ print_statistics ( test, size);
 unsigned char find_median (unsigned char * arr , unsigned int size ){
 	unsigned char median=0;
 	
-	sort_array ( arr ,  size)
+	sort_array ( arr ,  size);
 	if (size %2==0){
 		median = arr[size/2]+arr[(size/2)+1];
 		median/=2;	
 			}
         else 
-		median=arr[size/2]
+		median=arr[size/2];
 	return median ; 	
 
 
@@ -80,7 +80,7 @@ unsigned char find_maximum (unsigned char * arr , unsigned int size ){
 	int i=0;
 	for(i=0;i<size;i++){
 						
-		if ( arr[i]>max){
+		if ( arr[i]>max)
 		max=arr[i];
 			}
 					return max ; 	
@@ -93,7 +93,7 @@ unsigned char find_minimum (unsigned char * arr , unsigned int size ){
 		int i=0;
 				for(i=0;i<size;i++){
 						
-					if ( arr[i]<min){	
+					if ( arr[i]<min)	
 						min=arr[i];
 						   }
 		return min ; 	
