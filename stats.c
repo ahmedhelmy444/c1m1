@@ -1,4 +1,4 @@
-opyright (C) 2017 by Alex Fosdick - University of Colorado
+/**Copyright (C) 2017 by Alex Fosdick - University of Colorado
  *
  ** Redistribution, modification or use of this software in source or binary
  **forms is permitted as long as the files maintain this copyright. Users are 
@@ -24,7 +24,7 @@ opyright (C) 2017 by Alex Fosdick - University of Colorado
 #include "stats.h"
 
  unsigned char find_median (unsigned char * arr , unsigned int size );
- float find_mean (unsigned char * arr , unsigned int size );
+ unsigned char find_mean (unsigned char * arr , unsigned int size );
  unsigned char find_maximum (unsigned char * arr , unsigned int size );
  unsigned char find_minimum (unsigned char * arr , unsigned int size );
  void sort_array (unsigned char * arr , unsigned int size);
@@ -52,12 +52,14 @@ print_statistics ( test, size);
 unsigned char find_median (unsigned char * arr , unsigned int size ){
 	unsigned char median=0;
 	
-	sort_array (unsigned char * arr , unsigned int size)
+	sort_array ( arr ,  size)
 	if (size %2==0){
 		median = arr[size/2]+arr[(size/2)+1];
 		median/=2;	
 			}
-		return median ; 	
+        else 
+		median=arr[size/2]
+	return median ; 	
 
 
 }
@@ -78,7 +80,7 @@ unsigned char find_maximum (unsigned char * arr , unsigned int size ){
 	int i=0;
 	for(i=0;i<size;i++){
 						
-		if ( arr[i]>max)
+		if ( arr[i]>max){
 		max=arr[i];
 			}
 					return max ; 	
@@ -91,7 +93,7 @@ unsigned char find_minimum (unsigned char * arr , unsigned int size ){
 		int i=0;
 				for(i=0;i<size;i++){
 						
-					if ( arr[i]<min)	
+					if ( arr[i]<min){	
 						min=arr[i];
 						   }
 		return min ; 	
@@ -119,7 +121,7 @@ void print_statistics (unsigned char * arr , unsigned int size){
 	mean=find_mean(arr,size);
 
 	printf(" The median = %d\n ",median );
-	printf(" The mean = %f\n ",mean );
+	printf(" The mean = %d\n ",mean );
 	printf(" The maximum = %d\n ",max );
 	printf(" The minimum = %d\n ",min );
 
@@ -142,6 +144,7 @@ void sort_array (unsigned char * arr , unsigned int size){
 						}
 
 						}
+}
 	
 
 
